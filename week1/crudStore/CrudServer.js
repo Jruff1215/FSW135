@@ -16,8 +16,7 @@ mongoose.connect('mongodb://localhost:27017/storedb',
   () => console.log("Connected to the DB")
 )
 const inventoryRouter = require("./routes/inventoryRouter.js")
-// console.log(inventoryRouter)
-app.use("/inventories", require("./routes/inventoryRouter.js"))
+app.use("/inventories", inventoryRouter)
 
 app.use((err, req, res, next) => {
     console.log(err)

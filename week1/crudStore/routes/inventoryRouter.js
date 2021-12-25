@@ -51,12 +51,12 @@ inventoryRouter.put("/:inventoryId", (req, res, next) => {
     Inventory.findOneAndUpdate({_id: req.params.inventoryId},
         req.body, 
         { new: true }, 
-        (err, updatedMovie) => {
+        (err, updatedItem) => {
             if(err) {
                 res.status(500)
                 return next(err)
             }
-            return res.status(201).send(updatedMovie)
+            return res.status(201).send(updatedItem)
         })
 })
 
