@@ -13,6 +13,11 @@ const issueSchema = new Schema({
     votes: {
         type: Number,
         default: 0
+    },
+    user: {
+        type: Schema.Types.ObjectId,
+        ref: "User",
+        required: true
     }
 })
 

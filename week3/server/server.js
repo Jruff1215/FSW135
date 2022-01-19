@@ -1,7 +1,12 @@
 const express = require('express');
 const app = express();
-const mongoose = require('mongoose')
-const morgan = require('morgan')
+require('dotenv').config({ path: './routes/.env' });
+const mongoose = require('mongoose');
+const morgan = require('morgan');
+const expressJwt = require('express-jwt');
+const cors = require('cors')
+
+app.use(cors())
 
 app.use(express.json())
 app.use(morgan('dev'))
@@ -12,20 +17,29 @@ async function main() {
   await mongoose.connect('mongodb://localhost:27017/votedb');
   console.log("Connected to the DB")
 }
+app.get('/test',(req, res, next) => {
+        return res.status(201).send('foundItem')
+    })
+const authRouter = require("./routes/authRouter")
+app.use('/auth', authRouter)
+app.use('/api', expressJwt({ secret: process.env.SECRET, algorithms: ['HS256']}))
 
 const userRouter = require("./routes/userRouter.js")
-app.use("/users", userRouter)
+app.use("/api/users", userRouter)
 
 const issuesRouter = require("./routes/issueRouter.js")
-app.use("/issues", issuesRouter)
+app.use("/api/issues", issuesRouter)
 
 const commentsRouter = require("./routes/commentRouter.js")
-app.use("/comments", commentsRouter)
+app.use("/api/comments", commentsRouter)
 
 
 app.use((err, req, res, next) => {
-    console.log(err)
-    return res.send({errMsg: err.Message})
+    console.log(err, err.name)
+    if(err.name === "Unauthorized Error"){
+        res.status(err.status)
+    }
+    return res.send({errMsg: err.message})
 })
 app.get('/', (req, res) => {
     res.send("Successful")
