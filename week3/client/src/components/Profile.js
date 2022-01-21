@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import IssuesForm from './IssuesForm'
-import IssuesList from './IssuesList'
+import IssuesList from './issuesListMini'
 import { UserContext } from '../context/UserProvider'
 
 

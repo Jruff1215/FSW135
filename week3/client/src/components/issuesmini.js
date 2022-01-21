@@ -10,10 +10,8 @@ userAxios.interceptors.request.use(config => {
 })
 
 
-
 export default function Issues(props) {
     const { upVote, downVote} = useContext(UserContext)
-    const image = require('./earthClimateAction.jpg')
 
 
     const { title, description, votes, user, _id } = props
@@ -48,8 +46,7 @@ export default function Issues(props) {
     }, [])
 
     return (
-        <div className='issues'>
-            {/* <img className='image1' src={image} alt='' /> */}
+        <div className='issuesmini'>
             <h1 className='issuesTitle'>Issues</h1>
             <h1>{ title }</h1>
             <h3>{ description }</h3>

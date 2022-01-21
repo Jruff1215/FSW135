@@ -25,7 +25,7 @@ export default function IssuesForm(props){
         setInputs(initInputs)
     }
 
-    const { title, description} = inputs
+    const { title, description, votes} = inputs
     return(
         <form onSubmit={handleSubmit}>
             <input
@@ -40,6 +40,12 @@ export default function IssuesForm(props){
                 value={description}
                 onChange={handleChange}
                 placeholder='Description'/>
+            <input
+                type="number"
+                name='votes'
+                value={votes}
+                onChange={handleChange}
+                placeholder='Votes' />
             <button>Submit</button>
         </form>
     )

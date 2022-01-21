@@ -47,33 +47,47 @@ font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 .profile {
-  /* background-color: antiquewhite;
-  color: cadetblue;
-  position: relative;
-  -webkit-text-stroke:darkmagenta 1px ; */
-  background-image: url(./components/earthClimateAction.jpg);
-  background-repeat: repeat-y;
+  background-image: url(./components/climatehands.jpg);
   color: cadetblue;
   -webkit-text-stroke:darkmagenta 1px ;
-  height: 250mm;
-  width: 500mm;
-  background-color: antiquewhite;
+  height: auto;
+  width: auto;
 }
 
 .p1 {
   font-size: 5mm;
 }
 
-
-.issues {
-  /* background-image: url(./components/earthClimateAction.jpg);
-  background-repeat: repeat-y; */
+.issuesmini{
   color: cadetblue;
   -webkit-text-stroke:darkmagenta 1px ;
   height: 250mm;
   width: 500mm;
   background-color: antiquewhite;
   z-index: -1;
+  height: 150mm;
+  width: 150mm;
+  margin-left: 135mm;
+  border: 1px black;
+  border-width: 3px;
+  border-style: double solid;
+  margin-top: 50mm;
+}
+
+.image1 {
+
+
+}
+
+.issues{
+  background-image: url(./components/earthClimateAction.jpg);
+  color: cadetblue;
+  -webkit-text-stroke:darkmagenta 1px ;
+  height: 350mm;
+  width: 500mm;
+  background-color: antiquewhite;
+  z-index: -1;
+
 }
 
 .issuesTitle {
