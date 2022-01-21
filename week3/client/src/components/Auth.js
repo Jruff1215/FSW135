@@ -34,8 +34,8 @@ export default function Auth() {
     }
 
     return (
-        <div>
-            <h1>Climate Action 101</h1>
+        <div className='AuthPage'>
+            <h1 className='title' >Climate Action 101</h1>
             { !toggle ?
                 <>
                    <AuthForm

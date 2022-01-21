@@ -13,26 +13,69 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.AuthPage {
+background-image: url(./components/Landing_page.jpg);
+height: 150cm;
+color:darkmagenta;
+font: bold;
+font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.title {
+  font-size: 15mm;
+}
+
+.navbar {
+  background-color: darkmagenta;
+  height: 10mm;
+  font-size: 8mm;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-around;
+  
 }
 
-.App-link {
-  color: #61dafb;
+.link1 {
+  color: antiquewhite;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.link2 {
+  color: antiquewhite;
+}
+
+.link3 {
+  color: antiquewhite;
+}
+
+.profile {
+  /* background-color: antiquewhite;
+  color: cadetblue;
+  position: relative;
+  -webkit-text-stroke:darkmagenta 1px ; */
+  background-image: url(./components/earthClimateAction.jpg);
+  background-repeat: repeat-y;
+  color: cadetblue;
+  -webkit-text-stroke:darkmagenta 1px ;
+  height: 250mm;
+  width: 500mm;
+  background-color: antiquewhite;
+}
+
+.p1 {
+  font-size: 5mm;
+}
+
+
+.issues {
+  /* background-image: url(./components/earthClimateAction.jpg);
+  background-repeat: repeat-y; */
+  color: cadetblue;
+  -webkit-text-stroke:darkmagenta 1px ;
+  height: 250mm;
+  width: 500mm;
+  background-color: antiquewhite;
+  z-index: -1;
+}
+
+.issuesTitle {
+  font-size: 15mm;
 }

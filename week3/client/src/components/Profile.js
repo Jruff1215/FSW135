@@ -7,11 +7,13 @@ import { UserContext } from '../context/UserProvider'
 export default function Profile(){ 
     const { user: {username}, addIssue, issues } = useContext(UserContext)
     return (
-        <div>
-            <h1>Welcome @{username}!</h1>
-            <h3>Add An Issue</h3>
+        <div className='profile'>
+            <h1 className='welcome'>Welcome @{username}!</h1>
+            <p className='p1'>To you're Climate Action Profile Page where you can post your issues comments and concerns.
+                Don't hold back and post away!
+            </p>
+            <h3 className='addIssue'>Add An Issue</h3>
             <IssuesForm addIssue={addIssue} />
-            <h3>Your Issues</h3>
             <IssuesList issues={issues} />
         </div>
     )

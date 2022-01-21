@@ -24,7 +24,7 @@ function App() {
       />
         <Route
           path='/issues'
-          element= {  <IssuesList issues= {issues} /> }
+          element= { token ?  <IssuesList issues= {issues} /> : <Navigate to='/' /> }
           />
       </Routes>
       

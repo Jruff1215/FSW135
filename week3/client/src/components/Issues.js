@@ -47,6 +47,7 @@ export default function Issues(props) {
 
     return (
         <div className='issues'>
+            <h1 className='issuesTitle'>Issues</h1>
             <h1>{ title }</h1>
             <h3>{ description }</h3>
             <h4>{ votes }</h4>
